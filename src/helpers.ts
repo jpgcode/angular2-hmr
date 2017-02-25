@@ -19,6 +19,7 @@ export function createNewHosts(cmps: any) {
       // display none
       const currentDisplay = newNode.style.display;
       newNode.style.display = 'none';
+      newNode.setAttribute('settings', componentNode.getAttribute('settings'));
       const parentNode = componentNode.parentNode;
       parentNode.insertBefore(newNode, componentNode);
       return { currentDisplay, newNode };
